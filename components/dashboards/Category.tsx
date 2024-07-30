@@ -122,13 +122,13 @@ const Category: React.FC<Props> = ({ category, callback }) => {
         </div>
       </section>
 
-      <div className="grid grid-cols-5 grid-rows-4">
+      <div className="grid grid-cols-4 gap-5 m-5">
         {dashboards
           .filter((dashboard) => dashboard.category === category)
           .map((dashboard) => (
             <div
               key={dashboard.title}
-              className="bg-v-green text-white font-bold text-2xl hover:bg-v-light-green rounded-full w-full p-5 flex justify-center items-center text-center"
+              className="bg-v-green text-white font-bold text-2xl rounded-full w-full p-5 flex justify-center items-center text-center border-2 border-v-light-green hover:border-2 hover:border-v-green hover:bg-v-light-green"
             >
               <a
                 href={dashboard.ilink}
