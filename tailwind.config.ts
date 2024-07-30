@@ -9,12 +9,12 @@ const config: Config = {
   theme: {
     colors: {
       "v-green": "#32524D",
-      "v-lighter-green": "#386b61" 
-      ,
+      "v-lighter-green": "#386b61",
       "v-light-green": "#5a877c",
       "v-beige": "#9EA684",
-      "white": "#ffffff",
-      "grey": "#939393",
+      white: "#ffffff",
+      grey: "#939393",
+      blue: "#0000ff",
     },
     extend: {
       backgroundImage: {
@@ -22,20 +22,20 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
-        borderRadius: {
-          '20xl': '20rem',
+      borderRadius: {
+        "20xl": "20rem",
       },
     },
   },
   plugins: [
-    function({ addUtilities }: { addUtilities: any }) {
+    function ({ addUtilities }: { addUtilities: any }) {
       const newUtilities = {
-        '.user-select-none': {
-          userSelect: 'none',
+        ".user-select-none": {
+          userSelect: "none",
         },
-      }
-      addUtilities(newUtilities, ['responsive', 'hover'])
-    }
+      };
+      addUtilities(newUtilities, ["responsive", "hover"]);
+    },
   ],
 };
 export default config;
