@@ -17,8 +17,9 @@ const Learn: React.FC = () => {
             content.
           </p>
           <iframe
-            className="w-full h-full rounded-lg overflow-hidden"
+            className="w-1/2 rounded-lg overflow-hidden m-auto"
             src="https://www.youtube.com/embed/gtbDthhYtj0?si=HbmbtWdPzwJBYnPF"
+            allowFullScreen
           ></iframe>
         </section>
         <section className="flex flex-col space-y-4 p-5 bg-v-lighter-green rounded-lg m-2">
