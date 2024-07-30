@@ -58,9 +58,9 @@ const Navbar: React.FC = () => {
                 </Link>
               </li>
             </ul>
-            <div className="mt-10 mb-8">
+            <Link href="/">
               <span className={liStyle}>Logout</span>
-            </div>
+            </Link>
           </>
         )}
       </div>
