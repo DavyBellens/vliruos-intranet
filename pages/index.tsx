@@ -1,31 +1,30 @@
-import Header from "@/components/navigation/Header";
+import Link from "next/link";
 
 export default function Home() {
-  const liStyle = "cursor-pointer text-2xl hover:text-teal-500 font-bold m-5";
+  const linkStyle =
+    "text-4xl font-bold text-white bg-v-green p-2 rounded-lg text-center hover:bg-v-light-green hover:border-2 hover:border-v-green border-2 border-v-green";
   return (
     <>
       <Header title="Home" />
       <div className="flex flex-col items-center justify-center min-h-screen bg-v-light-green">
-        <h1 className="text-4xl text-v-green font-bold text-white">
-          Welcome to
-        </h1>
-        <div>
-          <h1 className="text-8xl text-v-green font-bold text-white">
-            Vliruos
-          </h1>
+        <div className="grid grid-cols-4 gap-4 mt-10 fixed top-0">
+          <Link className={linkStyle} href="/dashboards">
+            Dashboards
+          </Link>
+          <Link className={linkStyle} href="/learn">
+            Learn
+          </Link>
+          <Link className={linkStyle} href="/inspire-and-connect">
+            Inspire & Connect
+          </Link>
+          <Link className={linkStyle} href="/faq">
+            FAQ
+          </Link>
         </div>
+        <h1 className="text-4xl font-bold text-white">Welcome to</h1>
         <div>
-          <h1 className="text-4xl text-v-green font-bold text-white">
-            Sharing minds, changing lives
-          </h1>
+          <h1 className="text-8xl font-bold text-white">Vliruos</h1>
         </div>
-        <p>Quick links</p>
-        <ul className="bg-v-green text-white p-4 flex flex-row items-center justify-center">
-          <li className={liStyle}>Dashboards</li>
-          <li className={liStyle}>Learn</li>
-          <li className={liStyle}>Inspire & connect</li>
-          <li className={liStyle}>FAQ</li>
-        </ul>
       </div>
     </>
   );

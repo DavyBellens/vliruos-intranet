@@ -13,7 +13,7 @@ const Open: React.FC<Props> = ({ callback, opened }) => {
   const circleStyle =
     "bg-v-green rounded-full flex justify-center items-center mb-20 user-select-none";
   const partStyle =
-    "p-5 text-center text-white text-2xl font-bold bg-v-green hover:bg-v-lighter-green w-full h-full items-center user-select-none flex justify-center ";
+    "text-center text-white text-xl font-bold bg-v-green hover:bg-v-lighter-green w-full h-full items-center user-select-none flex justify-center ";
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
@@ -31,7 +31,7 @@ const Open: React.FC<Props> = ({ callback, opened }) => {
   }, [circleRef]);
   return (
     <>
-      <div
+      <section
         ref={circleRef}
         style={{
           height: open ? "60vh" : "40vh",
@@ -47,7 +47,7 @@ const Open: React.FC<Props> = ({ callback, opened }) => {
         {open ? (
           <>
             <p
-              className={partStyle + " rounded-tl-20xl"}
+              className={partStyle + " pt-10 pl-6 rounded-tl-20xl"}
               onClick={() => {
                 callback("Informational");
               }}
@@ -55,7 +55,7 @@ const Open: React.FC<Props> = ({ callback, opened }) => {
               Informational
             </p>
             <p
-              className={partStyle + " rounded-tr-20xl"}
+              className={partStyle + " pt-10 pr-10 rounded-tr-20xl"}
               onClick={() => {
                 callback("Analytical");
               }}
@@ -63,7 +63,7 @@ const Open: React.FC<Props> = ({ callback, opened }) => {
               Analytical
             </p>
             <p
-              className={partStyle + " rounded-bl-20xl"}
+              className={partStyle + " pb-10 pl-10 rounded-bl-20xl"}
               onClick={() => {
                 callback("Operational");
               }}
@@ -71,7 +71,7 @@ const Open: React.FC<Props> = ({ callback, opened }) => {
               Operational
             </p>
             <p
-              className={partStyle + " rounded-br-20xl"}
+              className={partStyle + " pb-10 pr-10 rounded-br-20xl"}
               onClick={() => {
                 callback("Other");
               }}
@@ -82,7 +82,7 @@ const Open: React.FC<Props> = ({ callback, opened }) => {
         ) : (
           <p className="text-white text-4xl font-bold">Click</p>
         )}
-      </div>
+      </section>
     </>
   );
 };

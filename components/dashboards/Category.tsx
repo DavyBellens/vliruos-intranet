@@ -33,7 +33,7 @@ const Category: React.FC<Props> = ({ category, callback }) => {
   ];
   return (
     <>
-      <div className="grid grid-cols-4 grid-rows-1 gap-5">
+      <section className="grid grid-cols-4 grid-rows-1 gap-5">
         <div className="grid grid-cols-5 grid-rows-1 col-span-4 row-start-1">
           <button
             onClick={() => callback("back")}
@@ -120,7 +120,7 @@ const Category: React.FC<Props> = ({ category, callback }) => {
             </ScatterChart>
           </ResponsiveContainer>
         </div>
-      </div>
+      </section>
 
       <div className="grid grid-cols-5 grid-rows-4">
         {dashboards
@@ -128,7 +128,7 @@ const Category: React.FC<Props> = ({ category, callback }) => {
           .map((dashboard) => (
             <div
               key={dashboard.title}
-              className="bg-v-green text-white font-bold text-2xl hover:bg-v-light-green rounded-full w-full p-5 m-5 flex justify-center items-center text-center"
+              className="bg-v-green text-white font-bold text-2xl hover:bg-v-light-green rounded-full w-full p-5 flex justify-center items-center text-center"
             >
               <a
                 href={dashboard.ilink}

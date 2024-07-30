@@ -1,19 +1,16 @@
-import { useState } from "react";
-
 type Props = {
+  open: boolean;
   location: string;
   callback: Function;
 };
 
-const Logo: React.FC<Props> = ({ location, callback }) => {
-  const [open, setOpen] = useState<boolean>(false);
+const Logo: React.FC<Props> = ({ open, location, callback }) => {
   const locCheck = location == "nav" ? "text-3xl" : "text-4xl";
   return (
     <div
       className="flex items-center w-full justify-center mb-10 cursor-pointer"
       onClick={() => {
         callback();
-        setOpen(!open);
       }}
     >
       <div
@@ -22,7 +19,7 @@ const Logo: React.FC<Props> = ({ location, callback }) => {
         } rounded-full flex justify-center items-center`}
       >
         <div
-          className={`bg-v-green 
+          className={`bg-v-green
             ${
               location == "nav" ? "h-10 w-10" : "h-20 w-20"
             } rounded-full flex justify-center items-center`}
@@ -35,7 +32,7 @@ const Logo: React.FC<Props> = ({ location, callback }) => {
             </span>
           ) : (
             <span
-              className={`font-bold text-v-beige 
+              className={`font-bold text-v-beige
                 ${locCheck}
               `}
             >
